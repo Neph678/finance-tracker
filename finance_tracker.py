@@ -64,10 +64,7 @@ rows.appent(rent)
 
 
 for row in rows:
-    # wks.insert_row([row[0], row[1], row[2], row[3]], 7)
-    # cell_list = wks.range(f'A{target_row}:D{target_row}')
     cell_range = f'A{target_row}:D{target_row}'
-    # wks.update([row[0], row[1], row[2], row[3]], cell_list)
     wks.update(cell_range, [[row[0], row[1], row[2], row[3]]])
     target_row += 1
     time.sleep(1)
